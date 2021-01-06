@@ -121,7 +121,7 @@ class Structure {
                 $boundary
             ];
 
-            if (preg_match("/boundary\=\"?(.*)\"?/", $this->raw, $match) == 1) {
+            if (preg_match_all("/boundary\=\"?(.*)\"?/", $this->raw, $match) > 0) {
                 if(is_array($match[1])){
                     foreach($match[1] as $matched){
                         $boundaries[] = str_replace('"', '', $matched);
