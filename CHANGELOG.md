@@ -17,6 +17,29 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Breaking changes
 - NaN
 
+## [2.4.2] - 2021-01-09
+### Fixed
+- Attachment::save() return error 'A facade root has not been set' #87
+- Unused dependencies removed
+- Fix PHP 8 error that changes null back in to an empty string. #88 (thanks @mennovanhout)
+- Fix regex to be case insensitive #88 (thanks @mennovanhout)
+
+### Affected Classes
+- [Attachment::class](src/Attachment.php)
+- [Address::class](src/Address.php)
+- [Attribute::class](src/Attribute.php)
+- [Structure::class](src/Structure.php)
+
+## [2.4.1] - 2021-01-06
+### Fixed
+- Debug line position fixed
+- Handle incomplete address to string conversion #83
+- Configured message key gets overwritten by the first fetched message #84
+
+### Affected Classes
+- [Address::class](src/Address.php)
+- [Query::class](src/Query/Query.php)
+
 ## [2.4.0] - 2021-01-03
 ### Fixed
 - Get partial overview when `IMAP::ST_UID` is set #74
