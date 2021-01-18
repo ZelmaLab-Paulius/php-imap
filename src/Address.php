@@ -58,7 +58,7 @@ class Address {
      * @return string
      */
     public function __toString() {
-        return $this->full;
+        return (is_string($this->full) ? $this->full : (is_string($this->mail) ? $this->mail : ''));
     }
 
     /**
